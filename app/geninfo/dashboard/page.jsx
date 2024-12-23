@@ -90,7 +90,7 @@ const GenInfoDashboard = () => {
     }
     
     try {
-      const response = await fetch(`http://localhost:8080/candidate-${url}/${id}`);
+      const response = await fetch(`https://background-verification-ozpv.onrender.com/candidate-${url}/${id}`);
       const data = await response.json();
       setCandidateDetails(data);
       if (data.length > 0) {
@@ -102,7 +102,7 @@ const GenInfoDashboard = () => {
             const value = params.value;
             if (typeof value === 'string' && value.startsWith('/uploads')) {
               return (
-                <a href={`http://localhost:8080${value}`} target="_blank" rel="noopener noreferrer">
+                <a href={`https://background-verification-ozpv.onrender.com${value}`} target="_blank" rel="noopener noreferrer">
                   preview
                 </a>
               );
@@ -144,7 +144,7 @@ const GenInfoDashboard = () => {
     console.log(value);
     if (typeof value === 'string' && (value.startsWith('/uploads') || value.startsWith('uploads'))) {
       return (
-        <a href={`http://localhost:8080${value}`} target="_blank" rel="noopener noreferrer">
+        <a href={`https://background-verification-ozpv.onrender.com${value}`} target="_blank" rel="noopener noreferrer">
           preview
         </a>
       );

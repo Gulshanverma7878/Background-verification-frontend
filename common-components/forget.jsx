@@ -26,7 +26,7 @@ const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:8080/users/forget", {
+    const response = await fetch("https://background-verification-ozpv.onrender.com/users/forget", {
         method: "POST", 
         headers: {
           "Content-Type": "application/json" 
